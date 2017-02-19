@@ -1,7 +1,7 @@
 package com.example.service;
 
 import com.example.domain.Customer;
-import com.example.repository.CustomerRepository;
+import com.example.repository.CustomerRepository_notJpa;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +14,7 @@ import java.util.List;
 public class CustomerService {
 
     @Autowired
-    CustomerRepository customerRepository;
+    CustomerRepository_notJpa customerRepository;
 
     public Customer save(Customer customer) {
         return customerRepository.save(customer);
